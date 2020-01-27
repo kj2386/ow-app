@@ -1,10 +1,12 @@
 import React from 'react';
-import Header from './components/Header.js'
+import Header from './components/Header.js';
+import SearchForm from './components/SearchForm';
 
 function App() {
   return (
     <div>
       <Header />
+      <SearchForm />
     </div>
   );
 }
