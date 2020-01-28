@@ -31,12 +31,6 @@ function App() {
       .catch(console.error);
   }
 
-  function handleChange(event) {
-    setPlatform(event.target.value);
-    setRegion(event.target.value);
-    setBattlenetID(event.target.value);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     getProfile(platform, region, battlenetID);
@@ -46,7 +40,9 @@ function App() {
     <div>
       <Header />
       <SearchForm
-        handleChange={handleChange}
+        setPlatform={setPlatform}
+        setRegion={setRegion}
+        setBattlenetID={setBattlenetID}
         handleSubmit={handleSubmit}
         battlenetID={battlenetID}
         platform={platform}

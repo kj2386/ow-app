@@ -2,9 +2,9 @@ import React from 'react';
 
 function ProfileHeader(props) {
   const { profile } = props;
-  console.log(profile)
-  if (!profile.length) {
-    return <h2>No profile found!</h2>;
+
+  if (profile.length === 0) {
+    return null;
   } else {
     return (
       <div className='profileHeader'>
