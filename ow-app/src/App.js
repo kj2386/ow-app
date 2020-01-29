@@ -12,9 +12,9 @@ function App() {
   };
 
   const [profile, setProfile] = useState([]);
-  const [battlenetID, setBattlenetID] = useState('');
-  const [platform, setPlatform] = useState('');
-  const [region, setRegion] = useState('');
+  const [battlenetID, setBattlenetID] = useState('Kalypso-11763');
+  const [platform, setPlatform] = useState('pc');
+  const [region, setRegion] = useState('us');
 
   useEffect(() => {
     getProfile(platform, region, battlenetID);
