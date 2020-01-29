@@ -3,6 +3,8 @@ import React from 'react';
 function ProfileHeader(props) {
   const { profile } = props;
 
+  console.log([...new Set(profile.ratings)]);
+
   if (profile.length === 0) {
     return null;
   } else if (profile.private === true) {
@@ -27,13 +29,27 @@ function ProfileHeader(props) {
         <div>{profile.endorsement}</div>
       </div>
       <div className="ratings-container">
-        {profile.ratings.map(data => (
+        {/* {profile.ratings.map(data => (
           <div key={data.role}>
             <img src={data.roleIcon} alt="role icon" />
             <img className="rank-icon" src={data.rankIcon} alt="rank icon" />
             <div>{data.level}</div>
           </div>
-        ))}
+        ))} */}
+        <img src={profile.ratings[0].roleIcon} alt="role icon" />
+        <img
+          className="rank-icon"
+          src={profile.ratings[0].rankIcon}
+          alt="rank icon"
+        />
+        <div>{profile.ratings[0].level}</div>
+        <img src={profile.ratings[1].roleIcon} alt="role icon" />
+        <img
+          className="rank-icon"
+          src={profile.ratings[1].rankIcon}
+          alt="rank icon"
+        />
+        <div>{profile.ratings[1].level}</div>
       </div>
     </div>
   );
