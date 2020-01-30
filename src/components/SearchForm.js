@@ -10,12 +10,10 @@ function SearchForm(props) {
     platform,
     region
   } = props;
+
   return (
     <div className="tile">
-      <form
-        onSubmit={handleSubmit}
-        className="field is-grouped"
-      >
+      <form onSubmit={handleSubmit} className="field is-grouped">
         <p className="control">
           <span className="select">
             <select
