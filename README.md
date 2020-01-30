@@ -1,5 +1,3 @@
-
-
 ## Description
 
 Basic Overwatch player search that displays Quickplay and Competitive data. Currently other player's profiles could only be viewed in game while your own profile can be viewed in game and on playOverwatch's site.
