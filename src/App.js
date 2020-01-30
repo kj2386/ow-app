@@ -50,9 +50,13 @@ function App() {
       />
       <ProfileHeader profile={profile} />
 
-      {profile.quickPlayStats && profile.quickPlayStats.careerStats ? <Quickplay profile={profile} /> : null}
+      {profile.quickPlayStats && profile.quickPlayStats.careerStats ? (
+        <Quickplay profile={profile} />
+      ) : null}
 
-      <Competitive profile={profile} />
+      {profile.competitiveStats && profile.competitiveStats.careerStats ? (
+        <Competitive profile={profile} />
+      ) : null}
     </div>
   );
 }

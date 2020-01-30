@@ -13,11 +13,11 @@
   width: 40px;
 }
 
-.Quickplay {
+.Quickplay, .Competitive{
   text-transform: uppercase;
 }
 
-.Quickplay li {
+.Quickplay li, .Competitive li {
   list-style-type: none;
   margin: 1em 0;
 }
