@@ -12,3 +12,12 @@
   height: 40px;
   width: 40px;
 }
+
+.Quickplay {
+  text-transform: uppercase;
+}
+
+.Quickplay li {
+  list-style-type: none;
+  margin: 1em 0;
+}

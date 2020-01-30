@@ -49,7 +49,9 @@ function App() {
         region={region}
       />
       <ProfileHeader profile={profile} />
-      <Quickplay profile={profile} />
+
+      {profile.quickPlayStats && profile.quickPlayStats.careerStats ? <Quickplay profile={profile} /> : null}
+
       <Competitive profile={profile} />
     </div>
   );
