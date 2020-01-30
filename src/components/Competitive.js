@@ -12,6 +12,7 @@ function Competitive(props) {
   const awards = profile.competitiveStats.careerStats.allHeroes.matchAwards;
 
   return (
+    
     <div className="Competitive">
       <h1>Competitive Stats</h1>
       <div className="best">

@@ -15,6 +15,8 @@ function App() {
   const [battlenetID, setBattlenetID] = useState('Kalypso-11763');
   const [platform, setPlatform] = useState('pc');
   const [region, setRegion] = useState('us');
+  const [show, setShow] = useState(true);
+  const [buttonText, setButtonText] = useState('Competitive');
 
   useEffect(() => {
     getProfile(platform, region, battlenetID);
@@ -36,6 +38,11 @@ function App() {
     getProfile(platform, region, battlenetID);
   }
 
+  function toggle() {
+    setShow(!show);
+    setButtonText(buttonText === 'Competitive' ? 'Quickplay' : 'Competitive');
+  }
+
   return (
     <div>
       <Header />
@@ -51,10 +58,16 @@ function App() {
       <ProfileHeader profile={profile} />
 
       {profile.quickPlayStats && profile.quickPlayStats.careerStats ? (
+        <button onClick={toggle}>{buttonText}</button>
+      ) : null}
+
+      {show && profile.quickPlayStats && profile.quickPlayStats.careerStats ? (
         <Quickplay profile={profile} />
       ) : null}
 
-      {profile.competitiveStats && profile.competitiveStats.careerStats ? (
+      {!show &&
+      profile.competitiveStats &&
+      profile.competitiveStats.careerStats ? (
         <Competitive profile={profile} />
       ) : null}
     </div>
