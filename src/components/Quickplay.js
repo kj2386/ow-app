@@ -4,6 +4,12 @@ function Quickplay(props) {
   const { profile } = props;
 
   const best = profile.quickPlayStats.careerStats.allHeroes.best;
+  const assists = profile.quickPlayStats.careerStats.allHeroes.assists;
+  const combat = profile.quickPlayStats.careerStats.allHeroes.combat;
+  const game = profile.quickPlayStats.careerStats.allHeroes.game;
+  const average = profile.quickPlayStats.careerStats.allHeroes.average;
+  const misc = profile.quickPlayStats.careerStats.allHeroes.miscellaneous;
+  const awards = profile.quickPlayStats.careerStats.allHeroes.matchAwards;
 
   return (
     <div className="Quickplay">
@@ -58,6 +64,94 @@ function Quickplay(props) {
           <li>
             turrets destroyed - most in game: {best.turretsDestroyedMostInGame}
           </li>
+        </ul>
+      </div>
+      <div className="Assists">
+        <h2>Assists</h2>
+        <ul>
+          <li>defensive assists: {assists.defensiveAssists}</li>
+          <li>healing done: {assists.healingDone}</li>
+          <li>offensive assists: {assists.offensiveAssists}</li>
+        </ul>
+      </div>
+      <div className="Combat">
+        <h2>Combat</h2>
+        <ul>
+          <li>damage done: {combat.damageDone}</li>
+          <li>barrier damage done: {combat.barrierDamageDone}</li>
+          <li>deaths: {combat.deaths}</li>
+          <li>eliminations: {combat.eliminations}</li>
+          <li>environmental kills: {combat.environmentalKills}</li>
+          <li>final blows: {combat.finalBlows}</li>
+          <li>hero damage done: {combat.heroDamageDone}</li>
+          <li>melee final blows: {combat.meleeFinalBlows}</li>
+          <li>multikills: {combat.multikills}</li>
+          <li>objective kills: {combat.objectiveKills}</li>
+          <li>objective time: {combat.objectiveTime}</li>
+          <li>solo kills: {combat.soloKills}</li>
+          <li>time spent on fire: {combat.timeSpentOnFire}</li>
+        </ul>
+      </div>
+      <div className="Game">
+        <h2>Game</h2>
+        <ul>
+          <li>games won: {game.gamesWon}</li>
+          <li>time played: {game.timePlayed}</li>
+        </ul>
+      </div>
+      <div className="Average">
+        <h2>Average</h2>
+        <ul>
+          <li>
+            all damage done - avg per 10 min: {average.allDamageDoneAvgPer10Min}{' '}
+          </li>
+          <li>
+            barrier damage done - avg per 10 min:{' '}
+            {average.barrierDamageDoneAvgPer10Min}{' '}
+          </li>
+          <li>deaths - avg per 10 min: {average.deathsAvgPer10Min} </li>
+          <li>
+            eliminations- avg per 10 min: {average.eliminationsAvgPer10Min}{' '}
+          </li>
+          <li>
+            final blows - avg per 10 min: {average.finalBlowsAvgPer10Min}{' '}
+          </li>
+          <li>
+            healing done - avg per 10 min: {average.healingDoneAvgPer10Min}{' '}
+          </li>
+          <li>
+            hero damage done - avg per 10 min:{' '}
+            {average.heroDamageDoneAvgPer10Min}{' '}
+          </li>
+          <li>
+            objective kills - avg per 10 min:{' '}
+            {average.objectiveKillsAvgPer10Min}{' '}
+          </li>
+          <li>
+            objective time - avg per 10 min: {average.objectiveTimeAvgPer10Min}{' '}
+          </li>
+          <li>solo kills - avg per 10 min: {average.soloKillsAvgPer10Min} </li>
+          <li>
+            time spent on fire - avg per 10 min:{' '}
+            {average.timeSpentOnFireAvgPer10Min}{' '}
+          </li>
+        </ul>
+      </div>
+      <div className="Misc">
+        <h2>Miscellaneous</h2>
+        <ul>
+          <li>teleporter pads destroyed: {misc.teleporterPadsDestroyed}</li>
+          <li>turrets destroyed: {misc.turretsDestroyed}</li>
+        </ul>
+      </div>
+      <div className="Awards">
+        <h2>Match Awards</h2>
+        <ul>
+          <li>cards: {awards.cards}</li>
+          <li>medals: {awards.medals}</li>
+          <li>medals - bronze: {awards.medalsBronze}</li>
+          <li>medals - silver: {awards.medalsSilver}</li>
+          <li>medals - gold: {awards.medalsGold}</li>
         </ul>
       </div>
     </div>
