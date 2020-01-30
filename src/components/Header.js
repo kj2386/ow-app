@@ -2,9 +2,13 @@ import React from 'react';
 
 function Header() {
   return (
-    <header>
-      <h1>Overwatch Player Searcher</h1>
-    </header>
+    <section class="hero is-info">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Overwatch Player Searcher</h1>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,23 +1,8 @@
-.profileHeader {
-  background-color: blue;
-  color: white;
-}
-
-.endorse-container img {
-  height: 100px;
-  width: 100px;
-}
-
 .rank-icon {
   height: 40px;
   width: 40px;
 }
 
-.Quickplay, .Competitive{
+.table {
   text-transform: uppercase;
-}
-
-.Quickplay li, .Competitive li {
-  list-style-type: none;
-  margin: 1em 0;
 }

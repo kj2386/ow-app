@@ -12,9 +12,9 @@ function App() {
   };
 
   const [profile, setProfile] = useState([]);
-  const [battlenetID, setBattlenetID] = useState('Kalypso-11763');
-  const [platform, setPlatform] = useState('pc');
-  const [region, setRegion] = useState('us');
+  const [battlenetID, setBattlenetID] = useState('');
+  const [platform, setPlatform] = useState('');
+  const [region, setRegion] = useState('');
   const [show, setShow] = useState(true);
   const [buttonText, setButtonText] = useState('Competitive');
 
@@ -55,10 +55,17 @@ function App() {
         platform={platform}
         region={region}
       />
-      <ProfileHeader profile={profile} />
-
       {profile.quickPlayStats && profile.quickPlayStats.careerStats ? (
-        <button onClick={toggle}>{buttonText}</button>
+        <ProfileHeader profile={profile} />
+      ) : null}
+
+      {profile && profile.quickPlayStats ? (
+        <button
+          className="button is-primary is-large is-fullwidth is-outlined is-focused is-hovered"
+          onClick={toggle}
+        >
+          {buttonText}
+        </button>
       ) : null}
 
       {show && profile.quickPlayStats && profile.quickPlayStats.careerStats ? (
