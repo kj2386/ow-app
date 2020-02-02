@@ -52,7 +52,9 @@ function SearchForm(props) {
             name="battlenetID"
             required
             value={battlenetID}
-            onChange={event => setBattlenetID(event.target.value)}
+            onChange={event =>
+              setBattlenetID(event.target.value.replace('#', '-'))
+            }
           />
         </p>
 
