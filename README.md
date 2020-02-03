@@ -4,8 +4,6 @@ Basic Overwatch player search that displays Quickplay and Competitive data. Curr
 
 ![app screenshot](https://github.com/kj2386/ow-app/blob/master/src/images/app-screenshot.png)
 
-Use a - instead of # for battlenet ID.
-
 Profiles must be set to public.
 
 ### Tech Used:
