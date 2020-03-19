@@ -24,20 +24,17 @@ function ProfileHeader(props) {
             <h2 className="title">{profile.gamesWon} Games Won</h2>
           </div>
           <div className="column">
-            <img src={profile.ratings[0].roleIcon} alt="role icon" />
-            <img
-              className="rank-icon"
-              src={profile.ratings[0].rankIcon}
-              alt="rank icon"
-            />
-            <div className="subtitle">{profile.ratings[0].level}</div>
-            <img src={profile.ratings[1].roleIcon} alt="role icon" />
-            <img
-              className="rank-icon"
-              src={profile.ratings[1].rankIcon}
-              alt="rank icon"
-            />
-            <div className="subtitle">{profile.ratings[1].level}</div>
+            {profile.ratings.map(data => (
+              <div key={data.role}>
+                <img src={data.roleIcon} alt="role icon" />
+                <img
+                  className="rank-icon"
+                  src={data.rankIcon}
+                  alt="rank icon"
+                />
+                <div>{data.level}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -46,13 +43,3 @@ function ProfileHeader(props) {
 }
 
 export default ProfileHeader;
-
-{
-  /* {profile.ratings.map(data => (
-  <div key={data.role}>
-    <img src={data.roleIcon} alt="role icon" />
-    <img className="rank-icon" src={data.rankIcon} alt="rank icon" />
-    <div>{data.level}</div>
-  </div>
-))} */
-}
