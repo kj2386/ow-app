@@ -24,17 +24,19 @@ function ProfileHeader(props) {
             <h2 className="title">{profile.gamesWon} Games Won</h2>
           </div>
           <div className="column">
-            {profile.ratings.map(data => (
-              <div key={data.role}>
-                <img src={data.roleIcon} alt="role icon" />
-                <img
-                  className="rank-icon"
-                  src={data.rankIcon}
-                  alt="rank icon"
-                />
-                <div>{data.level}</div>
-              </div>
-            ))}
+            {profile.ratings
+              ? profile.ratings.map(data => (
+                  <div key={data.role}>
+                    <img src={data.roleIcon} alt="role icon" />
+                    <img
+                      className="rank-icon"
+                      src={data.rankIcon}
+                      alt="rank icon"
+                    />
+                    <div>{data.level}</div>
+                  </div>
+                ))
+              : null}
           </div>
         </div>
       </div>
